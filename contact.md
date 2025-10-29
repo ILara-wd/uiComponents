@@ -1,5 +1,5 @@
 # 📬 Contacto
 
-- 💼 [LinkedIn](https://www.linkedin.com/in/tuusuario)
-- 🐙 [GitHub](https://github.com/tuusuario)
-- ✉️ Email: tuemail@ejemplo.com
+- 💼 [LinkedIn](https://www.linkedin.com/in/irvingglara-mobile-developer/)
+- 🐙 [GitHub](https://github.com/ILara-wd)
+- ✉️ Email: irvingglara.mobile.developer@gmail.com
