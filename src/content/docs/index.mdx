@@ -1,0 +1,40 @@
+---
+title: OneArtifacts
+description: Artefactos con `componentes` de UI y Core, `{network, storage, UI components}`
+template: splash
+hero:
+  tagline: Artefactos con @componentes de UI y Core, { navegation, network, storage, UI components }
+  image:
+    file: ../../assets/opencomposelogo.png
+  actions:
+    - text: ¡Ir a la documentación!
+      link: /home/guide/
+      icon: right-arrow
+      variant: primary
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+<CardGrid stagger>
+
+      <Card title="Navega por los componentes" icon="document">
+        Decenas de `Composables` preparados y configurados para que mejores tus
+        proyectos.
+      </Card>
+
+<Card title="Colabora con OneArtifacts" icon="github">
+  Puedes añadir más ejemplos, componentes o vistas completas. ¡Colaboremos entre
+  todos para tener la mejor documentación de habla hispana!
+</Card>
+
+    <Card title="¿Dudas/peticiones?" icon="discord">
+      Entra al Discord de la comunidad.
+    </Card>
+
+  <Card title="Más contenido en YouTube" icon="youtube">
+    Suscríbete a
+    [AristiDevs](https://www.youtube.com/channel/UCIjEgHA1vatSR2K4rfcdNRg?sub_confirmation=1)
+    para más contenido y apoyar el proyecto.
+  </Card>
+  
+</CardGrid>

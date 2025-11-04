@@ -1,0 +1,73 @@
+---
+title: Badge
+description: Aprende a usar el composable Badge en Jetpack Compose.
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+[comment]: <> (La ruta siempre será assets/nombeComponente/componente-header.webp)
+
+| Material 3| 
+| :------: |
+![Imagen del componente Badge](../../../assets/badges/badge/badge-header-material-3.png)
+
+`Badge` contiene información dinámica como notificaciones o productos de un carrito. Su contenido debería ser un icono o un texto muy corto, como por ejemplo un número.
+
+## Implementación
+
+### Definición del componente
+
+[comment]: <> (Añade un ``TabItem`` por cada tipo de implementación que tenga)
+
+<Tabs>
+<TabItem label="Material 3">
+
+```kotlin frame="terminal"
+@ExperimentalMaterial3Api
+@Composable
+fun Badge(
+    modifier: Modifier = Modifier,
+    containerColor: Color = BadgeDefaults.containerColor,
+    contentColor: Color = contentColorFor(containerColor),
+    content: @Composable (RowScope.() -> Unit)? = null,
+)
+```
+Atributo | Descripción
+------ | -----------
+modifier | Modificador que implementará el composable.
+containerColor | El color del fondo del componente.
+contentColor | Color del contenido.
+content | Contenido a mostrar dentro del `Badge` (_Opcional_).
+
+</TabItem>
+</Tabs>
+
+[comment]: <> (No modifiques el tip)
+
+:::tip[Fuente]
+Puedes acceder a la documentación oficial de Google
+[desde aquí](https://developer.android.com/reference/kotlin/androidx/compose/runtime/package-summary).
+:::
+
+### Ejemplos
+
+<Tabs>
+<TabItem label="Material 3">
+
+<center>![Imagen del componente Badge](../../../assets/badges/badge/badge-header-material-3.png)</center>
+
+```kotlin frame="terminal"
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun BadgeExample() {
+    Badge(
+        modifier = Modifier.padding(16.dp),
+        containerColor = Color.Red,
+        contentColor = Color.White,
+        content = { Text("1") },
+    )
+}
+```
+
+</TabItem>
+</Tabs>

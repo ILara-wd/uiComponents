@@ -1,0 +1,10 @@
+- COMPONENTE IMAGENES (TOP PRIORITARIO)
+- DECIDIR TITULO WEB
+- COMPLETAR HOME
+- ¿Qué metemos en la primera pantalla¿
+- Renombrar el proyecto (fast-force) a otro que decidamos
+- Hacer un template guay para este fichero y el de propuestas
+- Buscar componente de lista bonito
+- Actualizar el readme
+- Habilitar el mapa del sitio
+- Sección librerías/Composables de terceros - Preparar un template - o meterlo en la misma sección con tags y warnings
