@@ -1,0 +1,112 @@
+---
+import dialogIMG from "../assets/alertDialog/alertDialog-header-ExampleMaterial3.webp";
+import chipIMG from "../assets/chip/assist-chip/chip-assist-material-3-example.webp"; 
+import buttonIMG from "../assets/buttons/button/button-header-material-3.png"; 
+import appBarIMG from "../assets/appbars/bottomappbar/bottomappbar-header-material-3.png"; 
+import badgeIMG from "../assets/badges/badge/badge-header-material-3.png"; 
+import switchIMG from "../assets/switch/switch-header.webp"; 
+import textFieldIMG from "../assets/outlinedtextfield/outlinedtextfield3-header.webp";
+import textIMG from "../assets/text/text/text-plain-material-3.png";
+import bottomSheetIMG from "../assets/sheets/header-m3-example.webp";
+import checkBoxIMG from "../assets/checkbox/checkbox-header-material-3.png";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description, ...attributes } = Astro.props;
+
+const imageMapping: { [key: string]: string } = {
+  "Dialogs": dialogIMG.src,
+  "Chips": chipIMG.src,
+  "Buttons": buttonIMG.src,
+  "App Bars": appBarIMG.src,
+  "Badges": badgeIMG.src,
+  "Switch": switchIMG.src,
+  "Texts Fields": textFieldIMG.src,
+  "Texts": textIMG.src,
+  "Sheets": bottomSheetIMG.src,
+  "Checkbox": checkBoxIMG.src
+};
+
+const imagePath = imageMapping[title]
+---
+
+<div>
+  <span class="sl-flex stack">
+    <a {...attributes}>
+      <span class="title" set:html={title} />
+    </a>
+    {description && <span class="description" set:html={description} />}
+    {
+      imagePath && (
+        <span class="pepe">
+          {" "}
+          <img src={imagePath} alt={`Image for ${title}`} class="image" />
+        </span>
+      )
+    }
+    {/* Nueva línea para mostrar la imagen */}
+  </span>
+  <!-- <Icon name="right-arrow" size="1.333em" class="icon rtl:flip" /> -->
+</div>
+
+<style>
+  div {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: var(--sl-shadow-sm);
+    position: relative;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  /* a11y fix for https://github.com/withastro/starlight/issues/487 */
+  a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+
+  .stack {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .title {
+    color: var(--sl-color-white);
+    font-weight: 600;
+    font-size: var(--sl-text-lg);
+    line-height: var(--sl-line-height-headings);
+  }
+
+  .description {
+    color: var(--sl-color-gray-3);
+    line-height: 1.5;
+  }
+
+  .pepe {
+    margin: 0 auto;
+  }
+
+  .icon {
+    color: var(--sl-color-gray-3);
+  }
+
+  /* Hover state */
+  div:hover {
+    background: var(--sl-color-gray-7, var(--sl-color-gray-6));
+    border-color: var(--sl-color-gray-2);
+  }
+
+  div:hover .icon {
+    color: var(--sl-color-white);
+  }
+</style>
