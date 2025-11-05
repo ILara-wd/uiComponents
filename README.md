@@ -1,4 +1,4 @@
-# Composepedia
+# Artifact UI KIT
 <a><img alt="Version" src="https://badgen.net/static/Version/1.0.0/blue"/></a>
 
 Proyecto de visualización de componentes UI del artifacto UIKIT utilizando _Jetpack Compose_.
